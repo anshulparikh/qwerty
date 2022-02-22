@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "@components";
+import Button from "../src/components/Button/index";
 const index = () => {
-  return <Button>test</Button>;
+  return <Button />;
 };
 
 export default index;
