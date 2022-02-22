@@ -395,7 +395,11 @@
 // };
 
 const Button = () => {
-  return <button>Hello</button>;
-}
+    return (
+        <div>
+            <button>Hello</button>
+        </div>
+    );
+};
 
 export default Button;
