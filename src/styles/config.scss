@@ -1,0 +1,632 @@
+/*** 
+    *  CSS TABLE OF CONTENTS FOR BASE CLASS
+
+    *  1.0 - Stackabl Variables
+    *  2.0 - Stackabl Flex Mixin
+    *  3.0 - Stackabl TextAlignment Mixin
+    *  4.0 - Stackabl FontStyle Mixin 
+    *  5.0 - Stackabl Text Transform Mixin 
+    *  6.0 - Stackabl Position Mixin
+    *  7.0 - Stackabl Overflow Scroll Mixin
+    *  8.0 - Stackabl Height Mixin 
+    *  9.0 - Stackabl Width Mixin 
+    *  1.0.0 - Stackabl Padding Mixin
+    *  1.1.0 - Stackabl Margin Mixin
+    *  1.2.0 - Stackabl Text Decoration Mixin 
+    
+  ***/
+
+/****** ---------------------------------- 
+   1.0 - Stackabl Variables start here
+---------------------------------- ******/
+
+/*** Font Families ****/
+$font-bold: "Biko-Bold";
+$font-regular: "Biko-Regular";
+$font-light: "Biko-Light";
+$font-black: "Biko-Black";
+$font-FuturaPTBook: "FuturaPTBook";
+$font-FuturaPTDemi: "FuturaPTDemi";
+
+/**** Grey colors ****/
+$grey: #5d676e;
+$grey-1: #aaa;
+$grey-2: #bbb;
+$grey-3: #ccc;
+$grey-4: #ddd;
+$grey-5: #eee;
+$grey-6: #f5f9ff;
+$grey-7: #edf2f9;
+$grey-8: #1e272d;
+$grey-9: #e9eef4;
+$grey-10: #e4e7df;
+$grey-11: #e8ece2;
+$grey-light: #f2f2f2;
+$grey-light-2: #f0eeee;
+$grey-light-3: #d2cedf;
+$grey-light-4: #c3c3c3;
+$grey-light-5: #f0f2eb;
+$grey-light-6: #f9f9f9;
+$grey-light-7: #f7f9f5;
+$grey-light-8: #c4cfb3;
+$grey-light-9: #f5f6f2;
+$dark-grey-9: #999;
+
+/**** Dark colors ****/
+$black-color-0: #000;
+$black-color-1: #111;
+$black-color-2: #222;
+$black-color-3: #333;
+$black-color-4: #444;
+$black-color-4-0: #404040;
+
+/**** Error Colors ****/
+$error-color: #ff0a0a;
+$info-color: #39c0ed;
+$success-color: #00b74a;
+$error-color-background: #fbeae9;
+
+/**** Gradient colors ****/
+$gradient-color-bottom-to-top: -webkit-linear-gradient(
+  90deg,
+  #ecf2ff 0%,
+  #fafcff 43%,
+  white 100%
+);
+$gradient-color-top-to-bottom: -webkit-linear-gradient(
+  270deg,
+  #d4e1ff 0%,
+  #fafcff 75%,
+  white 100%
+);
+
+/**** Border colors ****/
+$border-color: #5c9af7;
+
+/**** Shadow colors ****/
+
+$box-shadow-black-color-1: 0px 8px 40px 0px rgba(0, 0, 0, 0.1);
+$box-shadow-black-color-5: 0px 8px 40px 0px rgba(0, 0, 0, 0.5);
+$box-shadow-black-color-3: 0px 10px 70px 0px rgba(0, 0, 0, 0.45);
+$button-shadow-hover-color-1: 0px 8px 15px rgba(33, 33, 33, 0.08);
+$shadow-color-1: rgba(0, 0, 0, 0.6);
+
+/**** Overlay Colors ****/
+$overlay: rgba(0, 0, 0, 0.8);
+
+/**** Text color ****/
+$white-text: #fff;
+$black-text: #1e272d;
+
+$list-hover-color: #f8f8f8;
+$blue-light-color: #d5e2ff;
+$hover-color: rgba(35, 112, 244, 0.5);
+
+/**** Background color ****/
+$white-color: #ffffff;
+$black-color: #000000;
+
+/**** Common colors ****/
+$primary-color: #2477f3;
+$secondary-color: #e7e7e7;
+$dark-color: #000;
+$light-color: #fff;
+$green-color: #00c68d;
+$deep-green: #67823a;
+$warning-color: #ff0000;
+$brand-color: #627F39;
+$link-foucs-color: #60763c;
+
+/**** theme color ****/
+$black-color: #000;
+$white-color: #fff;
+$blue-color: #2477f3;
+$royal-blue-color: #3e50da;
+$purple-color: #8e41c9;
+$light-blue-color: #1da1f2;
+$teal-color: #00857a;
+$green-color: #008760;
+$light-green-color: #c0cdaa;
+$pink-color: #e21a60;
+$red-color: #f31626;
+$orange-color: #ec4800;
+$yellow-color: #e68c0b;
+$linkedin-color: #0e76a8;
+$messenger-color: #006aff;
+$facebook-color: #4267b2;
+$whatsapp-color: #4fce5d;
+$twitter-color: #00acee;
+$telegram-color: #0088cc;
+$instagram-color: #8a3ab9;
+$tag-color: #cfdd0c;
+$tag-hover-color: #c4d109;
+$tag-warning-color: #d03c3c;
+
+/**** Transparent theme color ****/
+$primary-opacity-color: rgba(36, 119, 243, 0.4);
+$secondary-opacity-color: rgba(231, 231, 231, 0.4);
+$black-opacity-color: rgba(0, 0, 0, 0.4);
+$white-opacity-color: rgba(255, 255, 255, 0.4);
+$blue-opacity-color: rgb(36, 119, 243, 0.4);
+$royal-blue-opacity-color: rgba(62, 80, 218, 0.4);
+$purple-opacity-color: rgba(142, 65, 201, 0.4);
+$light-blue-opacity-color: rgb(29, 161, 242, 0.4);
+$teal-opacity-color: rgba(0, 133, 122, 0.4);
+$green-opacity-color: rgba(0, 135, 96, 0.4);
+$pink-opacity-color: rgba(226, 26, 96, 0.4);
+$red-opacity-color: rgba(243, 22, 38, 0.4);
+$orange-opacity-color: rgba(236, 72, 0, 0.4);
+$yellow-opacity-color: rgb(230, 140, 11, 0.4);
+$linkedin-opacity-color: rgba(14, 118, 168, 0.4);
+$messenger-opacity-color: rgba(0, 106, 255, 0.4);
+$facebook-opacity-color: rgba(66, 103, 178, 0.4);
+$whatsapp-opacity-color: rgba(79, 206, 93, 0.4);
+$twitter-opacity-color: rgba(0, 172, 238, 0.4);
+$telegram-opacity-color: rgba(0, 136, 204, 0.4);
+$instagram-opacity-color: rgba(138, 58, 185, 0.4);
+
+/****** ---------------------------------- 
+ 1.0 - Stackabl Variables end here
+ ---------------------------------- ******/
+
+/****** ---------------------------------- 
+ Mixins start here
+ ---------------------------------- ******/
+
+/****  2.0 - Stackabl Flex Mixin start here ****/
+@mixin flex(
+  $flex,
+  $flexWrap: "",
+  $flexDirection,
+  $flexItemAlignment,
+  $flexColumnAlignment
+) {
+  display: $flex;
+  flex-wrap: $flexWrap;
+  flex-direction: $flexDirection;
+  justify-content: $flexColumnAlignment;
+  align-items: $flexItemAlignment;
+}
+/****  2.0 - Stackabl Flex Mixin end here ****/
+
+/****  3.0 - Stackabl TextAlignment Mixin start here ****/
+@mixin text_align($textAlignment) {
+  text-align: $textAlignment;
+}
+/****  3.0 - Stackabl TextAlignment Mixin end here ****/
+
+/****  4.0 - Stackabl FontStyle Mixin start here ****/
+@mixin font_style($fontStyle) {
+  font-style: $fontStyle;
+}
+/****  4.0 - Stackabl FontStyle Mixin end here ****/
+
+/****  5.0 - Stackabl Text Transform Mixin start here ****/
+@mixin text_transform($textTransform) {
+  text-transform: $textTransform;
+}
+/****  5.0 - Stackabl Text Transform Mixin end here ****/
+
+/****  6.0 - Stackabl Position  Mixin start here ****/
+@mixin position($position, $top: "", $left: "", $right: "", $bottom: "") {
+  position: $position;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  top: $top;
+}
+/****  6.0 - Stackabl Position Mixin end here ****/
+/****  7.0 - Stackabl Overflow Scroll Mixin start here ****/
+@mixin overflow($overflow, $overflowY, $overflowX) {
+  overflow: $overflow;
+  overflow: $overflowY;
+  overflow-x: $overflowX;
+}
+/****  7.0 - Stackabl Overflow Scroll Mixin end here ****/
+/****  8.0 - Stackabl Height Mixin start here ****/
+@mixin height($height, $minHeight, $maxHeight) {
+  height: $height;
+  min-height: $minHeight;
+  max-height: $minHeight;
+}
+/****  8.0 - Stackabl Height Mixin end here ****/
+/****  9.0 - Stackabl Width Mixin start here ****/
+@mixin width($width, $minWidth: "", $maxWidth: "") {
+  width: $width;
+  min-width: $maxWidth;
+  max-width: $minWidth;
+}
+/****  9.0 - Stackabl Width Mixin end here ****/
+/****  1.0.0 - Stackabl Padding Mixin start here ****/
+
+@mixin padding($paddingLeft, $paddingRight, $paddingTop, $paddingBottom) {
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight;
+  padding-top: $paddingTop;
+  padding-bottom: $paddingBottom;
+}
+/****  1.0.0 - Stackabl Padding Mixin end here ****/
+/****  1.1.0 - Stackabl Margin Mixin start here ****/
+
+@mixin margin($marginLeft, $marginRight, $marginTop, $marginBottom) {
+  margin-left: $marginLeft;
+  margin-right: $marginRight;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+/****  1.1.0 - Stackabl Margin Mixin end here ****/
+
+/****  1.2.0 - Stackabl Text Decoration Mixin start here ****/
+@mixin text_decoration($textDecoration) {
+  text-decoration: $textDecoration;
+}
+/****  1.2.0 - Stackabl Text Decoration Mixin end here ****/
+
+/****  1.2.0 - Stackabl Text Truncate Mixin start here ****/
+@mixin text_truncate($textOverflow, $overflow, $whiteSpace) {
+  text-overflow: $textOverflow;
+  overflow: $overflow;
+  white-space: $whiteSpace;
+}
+/****  1.2.0 - Stackabl Text Truncate Mixin end here ****/
+
+/****** ---------------------------------- 
+ Mixins end here
+ ---------------------------------- ******/
+
+/****** ---------------------------------- 
+ Mixins Media end here
+ ---------------------------------- ******/
+@mixin for-lg-phone-only {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin for-tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin for-big-tablet-up {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin for-xl-desktop-up {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+@mixin for-xxl-desktop-up {
+  @media (min-width: 1700px) {
+    @content;
+  }
+}
+@mixin for-large-desktop-down {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin for-small-desktop-only {
+  @media screen and (max-width: 1300px) {
+    @content;
+  }
+}
+@mixin for-phone-desktop-only {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin for-ipadpro-only {
+  @media (min-width:992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin for-lg-phone-tablet-only {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin for-ipad-only {
+  @media (min-width:768px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin for-phone-tablet-only {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin for-small-phone-only {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
+@mixin for-exsmall-phone-only {
+  @media screen and (max-width: 413px) {
+    @content;
+  }
+} 
+@mixin for-xxsmall-phone-only {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+} 
+
+@mixin truncat-on-line($line-no, $box-orient : vertical) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line-no;
+    -webkit-box-orient: $box-orient;  
+    overflow: hidden;
+}
+/****** ---------------------------------- 
+ Mixins Media end here
+ ---------------------------------- ******/
+
+ /* Default button style template*/
+ %button {
+  background-color: $brand-color;
+  border: 2px solid $brand-color;
+  border-radius: 50px !important;
+  color: $white-color;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+  z-index: 1;
+  font-size: 14px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  @include for-ipadpro-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-ipad-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  } 
+  @include for-small-phone-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-exsmall-phone-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  }
+  &:not(.is-tabbing) {
+      outline: none;
+  }  
+  &::before {
+      background: $white-color;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%) skew(-45deg);
+      transform-origin: 0 0;
+      transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+      width: 150%;
+      z-index: -1;
+  }
+  &:hover,
+  &.hover {
+      color: $brand-color;
+      border-color: $brand-color;
+      background-color: $brand-color;
+      box-shadow: none;
+      &::before {
+          transform: translateX(0) skew(-45deg);
+      }
+  }
+  &:focus {
+      color: $brand-color;
+      border-color: $brand-color;
+      background-color: $white-color;
+      box-shadow: none;
+  }
+}
+
+%white-button {
+  background-color: $white-color;
+  border: 2px solid $white-color;
+  border-radius: 50px !important;
+  color: $brand-color;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+  z-index: 1;
+  font-size: 14px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  @include for-ipadpro-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-ipad-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  }
+  @include for-small-phone-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-exsmall-phone-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  }
+  &:not(.is-tabbing) {
+      outline: none;
+  }  
+  &::before {
+      background: $brand-color;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%) skew(-45deg);
+      transform-origin: 0 0;
+      transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+      width: 150%;
+      z-index: -1;
+  }
+
+  &:hover,
+  &.hover {
+      color: $white-color;
+      border-color: $white-color;
+      background-color: $white-color;
+      box-shadow: none;
+      &::before {
+          transform: translateX(0) skew(-45deg);
+      }
+  }
+  &:focus {
+      color: $white-color;
+      border-color: $white-color;
+      background-color: $brand-color;
+      box-shadow: none;
+  }
+}
+
+%border-button {
+  background-color: $white-color;
+  border: 2px solid $brand-color;
+  border-radius: 50px !important;
+  color: $brand-color;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+  z-index: 1;
+  font-size: 14px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  @include for-ipadpro-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-ipad-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  }
+  @include for-small-phone-only {
+    font-size: 13px;
+    padding: 12px 25px;
+  }
+  @include for-exsmall-phone-only {
+    font-size: 12px;
+    padding: 11px 25px;
+  }
+  &:not(.is-tabbing) {
+      outline: none;
+  }  
+  &::before {
+      background: $brand-color;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%) skew(-45deg);
+      transform-origin: 0 0;
+      transition: transform 1s cubic-bezier(0.07, 0.51, 0.12, 1);
+      width: 150%;
+      z-index: -1;
+  }
+
+  &:hover,
+  &.hover {
+      color: $white-color;
+      border-color: $brand-color;
+      background-color: $white-color;
+      box-shadow: none;
+      &::before {
+          transform: translateX(0) skew(-45deg);
+      }
+  }
+  &:focus {
+      color: $white-color;
+      border-color: $brand-color;
+      background-color: $brand-color;
+      box-shadow: none;
+  }
+}
+
+%bulletLIst {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
+  li { 
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 7px;
+      cursor: initial;
+      font-size: 16px;
+      line-height: 1.44;
+      @include for-desktop-up {
+          font-size: 18px;
+      }
+      @include for-ipadpro-only {
+          font-size: 15px;
+      }
+      @include for-ipad-only {
+          font-size: 15px;
+      }
+      @include for-phone-tablet-only {
+          font-size: 18px;
+      }
+      @include for-small-phone-only {
+          font-size: 16px;
+      }
+      @include for-exsmall-phone-only {
+          font-size: 15px;
+      }   
+      &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 9px;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          background-color: $brand-color;
+      }
+  }
+}
+
+/**Container Css**/
+.container_lg{
+  max-width: 1920px;
+  padding: 0; 
+}
+.container_md{
+  max-width: 1820px;
+  padding: 0 50px;
+  @include for-small-desktop-only {
+    padding: 0 25px;
+  } 
+}
+.container_sm{
+  max-width: 1530px;
+  padding: 0 75px;
+  @include for-small-desktop-only {
+    padding: 0 25px;
+  } 
+} 

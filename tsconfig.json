@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "baseUrl": ".",
+        "jsxImportSource": "@emotion/react",
+        "types": ["@emotion/react"],
+
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@util/*": ["src/utils/*"],
+            "@templates/*": ["src/templates/*"],
+            "@modal/*": ["src/modal/*"],
+            "@modal": ["src/modal"],
+            "@components": ["src/components"],
+            "@styles/*": ["src/styles/*"],
+            "@styles": ["src/styles"],
+            "@public/*": ["public/*"],
+            "@public": ["public"],
+            "@components/icons/*": ["src/components/icons/*"],
+            "@components/icons": ["src/components/icons"],
+            "@services/*": ["src/services/*"],
+            "@services": ["src/services"],
+            "@graphqlTypes/*": ["__generated__/*"],
+            "@graphqlTypes": ["__generated__"],
+            "@redux/*": ["src/redux/*"],
+            "@redux": ["src/redux"],
+            "@test/*": ["test/*"],
+            "@test": ["test"]
+        }
+    },
+    "include": [
+        "next-env.d.ts",
+        "./src/image.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "api/api.js",
+        "src/components/Table123/TableContext.ts"
+    ],
+    "exclude": ["node_modules", "__generated__/globalTypes.ts", "test/*"]
+}

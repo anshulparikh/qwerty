@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Biko-Bold";
+  src: url("../../public/fonts/Biko/biko_bold.woff2") format("woff2"),
+    url("../../public/fonts/Biko/biko_bold.woff") format("woff"),
+    url("../../public/fonts/Biko/biko_bold.ttf") format("ttf"),
+    url("../../public/fonts/Biko/biko_bold.otf") format("OpenType");
+
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Biko-Light";
+  src: url("../../public/fonts/Biko/biko_light-restricted.woff2") format("woff2"),
+    url("../../public/fonts/Biko/biko_light-restricted.woff") format("woff"),
+    url("../../public/fonts/Biko/biko_light-restricted.ttf") format("ttf"),
+    url("../../public/fonts/Biko/biko_light-restricted.otf") format("OpenType");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Biko-Regular";
+  src: url("../../public/fonts/Biko/biko_regular.woff2") format("woff2"),
+    url("../../public/fonts/Biko/biko_regular.woff") format("woff"),
+    url("../../public/fonts/Biko//biko_regular.ttf") format("ttf"),
+    url("../../public/fonts/Biko//biko_regular.otf") format("OpenType");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Biko-Black";
+  src: url("../../public/fonts/Biko/biko_black.woff2") format("woff2"),
+    url("../../public/fonts/Biko/biko_black.woff") format("woff"),
+    url("../../public/fonts/Biko//biko_black.ttf") format("ttf"),
+    url("../../public/fonts/Biko//biko_black.otf") format("OpenType");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url("../../public/fonts/futura/FuturaPTBook.woff2") format("woff2"),
+    url("../../public/fonts/futura/FuturaPTBook.woff") format("woff"),
+    url("../../public/fonts/futura//FuturaPTBook.ttf") format("ttf"),
+    url("../../public/fonts/futura//FuturaPTBook.otf") format("OpenType");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+font-family: "FuturaPTDemi";
+src: url("../../public/fonts/futura/Futura-Demi.woff2") format("woff2"),
+  url("../../public/fonts/futura/Futura-Demi.woff") format("woff"),
+  url("../../public/fonts/futura//Futura-Demi.ttf") format("ttf"),
+  url("../../public/fonts/futura//Futura-Demi.otf") format("OpenType");
+font-style: normal;
+font-display: swap;
+}
+@import "@styles/config.scss";
+@import url("https://use.typekit.net/ljn1mrg.css");
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.44;
+  @include for-desktop-up {
+    font-size: 18px;
+  }
+  @include for-ipadpro-only{
+    font-size: 15px;
+  }
+  @include for-ipad-only{
+    font-size: 15px;
+  }
+  @include for-phone-tablet-only {
+    font-size: 18px;
+  }
+  @include for-small-phone-only {
+    font-size: 16px;
+  }
+  @include for-exsmall-phone-only{
+    font-size: 15px;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+  // color: var(--grey);
+  font-size: 16px;
+  line-height: 1.44;
+  font-family: FuturaPTBook, sans-serif;
+  @include for-desktop-up {
+    font-size: 18px;
+  }
+  @include for-ipadpro-only{
+    font-size: 15px;
+  }
+  @include for-ipad-only{
+    font-size: 15px;
+  }
+  @include for-phone-tablet-only {
+    font-size: 18px;
+  }
+  @include for-small-phone-only {
+    font-size: 16px;
+  }
+  @include for-exsmall-phone-only{
+    font-size: 15px;
+  }
+
+  // font-family: var(--font-family-poppins-regular);
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+}
+.container_xl{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
+.containerlg{
+  max-width: 1500px;
+  padding: 0 45px;
+}
+.scrollable_body{
+  overflow: hidden;
+}
+.mb-p{
+  margin-bottom: 20px;
+  @include for-exsmall-phone-only{
+    margin-bottom: 15px;
+    line-height: normal;
+  }
+} 
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.list-styling{
+  @extend %bulletLIst;
+}
+.blog-class {
+  text-align: left !important;
+}
+.special-store {
+  max-width: 90%;
+  @include for-xxl-desktop-up {
+    max-width: 85%;
+}
+@include for-large-desktop-down {
+  max-width: 100%;
+}
+}

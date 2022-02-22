@@ -1,0 +1,33 @@
+<svg id="prev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="82" viewBox="0 0 82 82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #ddd;
+        stroke-width: 1px;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #67823a;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" x="0.5" y="0.5" width="81" height="81" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="5" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="4"/>
+      <feFlood result="flood" flood-color="#67823a" flood-opacity="0.19"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="bg">
+    <g style="fill: #fff; filter: url(#filter)">
+      <circle id="circle" class="cls-1" cx="40.5" cy="35.5" r="25" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use xlink:href="#circle" style="stroke: #ddd; filter: none; fill: none"/>
+  </g>
+  <g id="arrow">
+    <path id="arrow-2" data-name="arrow" class="cls-2" d="M257.789,2017.79a1.482,1.482,0,0,1-1.049-.44l-5.322-5.41a1.5,1.5,0,0,1,0-2.1l5.322-5.41a1.465,1.465,0,0,1,2.091-.01,1.5,1.5,0,0,1,.007,2.11l-4.288,4.36,4.288,4.35a1.5,1.5,0,0,1-.007,2.11A1.473,1.473,0,0,1,257.789,2017.79Z" transform="translate(-214.5 -1975.5)"/>
+  </g>
+</svg>

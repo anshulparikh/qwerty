@@ -1,0 +1,14 @@
+<svg width="450" height="446" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+ <g stroke="null">
+  <title stroke="null">background</title>
+  <rect stroke="null" fill="none" id="canvas_background" height="448" width="452" y="-1" x="-1"/>
+  <g stroke="null" style="vector-effect: non-scaling-stroke;" display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <path stroke="#FF0000" id="svg_1" d="m342.822817,152.681597l-52.185797,0l0,-24.109671l-131.274044,0l0,24.109671l-52.509618,0c-15.458832,0 -28.005137,14.401514 -28.005137,32.146237l0,166.758563c0,17.744708 12.546304,32.146223 28.005137,32.146223l236.293279,0c15.458832,0 28.005137,-14.401514 28.005137,-32.146223l0,-166.758563c0,-17.744723 -12.870125,-32.146237 -28.328957,-32.146237zm-117.829815,212.952702c-46.796577,0 -84.855554,-43.702797 -84.855554,-97.419148c0,-53.716351 38.058977,-97.435219 84.855554,-97.435219s84.883554,43.718868 84.883554,97.435219c0,53.716351 -38.100985,97.419148 -84.883554,97.419148zm0,-162.724216c-31.421761,0 -56.878418,29.236997 -56.878418,65.288997c0,36.068056 25.470665,65.288982 56.878418,65.288982c31.421745,0 56.878418,-29.220926 56.878418,-65.288982c0.014008,-36.051999 -25.442665,-65.288997 -56.878418,-65.288997z" stroke-width="0.001" fill="#2a71ed"/>
+ </g>
+</svg>

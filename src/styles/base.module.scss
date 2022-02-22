@@ -1,0 +1,343 @@
+@import "./config.scss";
+/*** 
+    *  CSS TABLE OF CONTENTS FOR BASE CLASS
+
+    *  1.0 - Stackabl Typography
+    *  2.0 - Stackabl Color Shade
+    *  3.0 - Stackabl List
+    *  4.0 - Stackabl Border
+    *  5.0 - stackabl Flexbox
+    *  6.0 - Stackabl Z-index
+    
+  ***/
+
+/*** 1.0 - Stackabl Typography css start here  ***/
+
+.st_font_bold {
+  font-family: $font-bold;
+}
+.st_font_regular {
+  font-family: $font-regular;
+  font-weight: normal;
+}
+.st_font_light {
+  font-family: $font-light;
+}
+.st_font_bold_black {
+  font-family: $font-black;
+}
+/*** 1.0 - Stackabl Typography css end here  ***/
+
+/***  2.0 - Stackabl Color Shade css start here ***/
+.st_bg_white {
+  background-color: $white-color;
+}
+.st_bg_transparent {
+  background-color: transparent;
+}
+.st_bg_primary {
+  background-color: $primary-color;
+}
+.st_bg_secondary {
+  background-color: $black-color;
+}
+
+.st_border_primary {
+  border-color: $primary-color;
+}
+.st_border_secondary {
+  border-color: $black-color;
+}
+
+.st_text_primary {
+  color: $primary-color;
+}
+.st_text_secondary {
+  color: $black-color;
+}
+
+.st_text_black {
+  color: $black-color-0;
+}
+.st_text_white {
+  color: $white-text;
+}
+.st_text_grey {
+  color: $black-color-4-0;
+}
+.st_text_green_color{
+  color: $brand-color;
+}
+.st_text_grey_link{
+  color: $grey-light-4;
+}
+.st_text_selected {
+  color: $primary-color;
+}
+
+/***  2.0 - Stackabl Color Shade css end here ***/
+
+/***  3.0 - Stackabl List css start here ***/
+
+.st_list_unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.st_list_hoverable:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+.st_underline_none{
+  text-decoration: none;
+}
+/*** Stackabl List css start here ***/
+
+/***  4.0 - Stackabl Border  ***/
+
+.st_border {
+  border: 1px solid;
+}
+.st_border_0 {
+  border: none !important;
+}
+.st_border_top {
+  border-top: 1px solid $grey-4;
+}
+.st_border_top_0 {
+  border-top: 0;
+}
+.st_border_bottom {
+  border-bottom: 1px solid $grey-4;
+}
+.st_border_bottom_0 {
+  border-bottom: 0 !important;
+}
+
+.st_border_left {
+  border-left: 1px solid $grey-4;
+}
+
+.st_border_left_0 {
+  border-left: 0;
+}
+.st_border_left {
+  border-left: 1px solid $grey-4;
+}
+
+.st_border_right {
+  border-right: 1px solid $grey-4;
+}
+
+.st_border_right_0 {
+  border-right: 0;
+}
+
+/*** Stackabl Border end here ***/
+
+/*** 5.0 - Stackabl Flexbox css start here ***/
+
+.st_flex {
+  @include flex(flex, wrap, row, center, center);
+}
+.st_flex_inline {
+  @include flex(inline-flex, null, null, center, flex-start);
+}
+/*** 5.0 - Stackabl Flexbox css end here ***/
+
+/***  6.0 - Stackabl Z-index css start here ***/
+
+.st_z_0 {
+  z-index: 0;
+}
+.st_z_1 {
+  z-index: 1;
+}
+.st_z_2 {
+  z-index: 2;
+}
+
+/*** Stackabl Z-index css end here ***/
+
+/****** ---------------------------------- 
+  Base css start here
+---------------------------------- ******/
+
+.st_auto_center {
+  margin: 0 auto;
+}
+.st_auto_right {
+  margin-right: auto;
+}
+.st_auto_left {
+  margin-left: auto;
+}
+
+.st_img_responsive{
+  width: 100%;
+}
+
+/****** ---------------------------------- 
+  Base css end here
+---------------------------------- ******/
+
+/****** ---------------------------------- 
+  Base Media css start here
+---------------------------------- ******/
+@include for-lg-phone-only {
+  .st_xs_hidden {
+    display: none;
+  }
+}
+
+@include for-tablet-up() {
+  .st_sm_hidden {
+    display: none;
+  }
+  .st_sm_block {
+    display: block;
+  }
+}
+
+@include for-big-tablet-up {
+  .st_md_hidden {
+    display: none;
+  }
+  .st_md_block {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .st_lg_hidden {
+    display: none;
+  }
+}
+@include for-big-desktop-up {
+  .st_lg_hidden {
+    display: none;
+  }
+  .st_lg_block {
+    display: block;
+  }
+}
+@include for-phone-tablet-only {
+  .st_xs_hidden {
+    display: none;
+  }
+  .st_xs_justify_center {
+    justify-content: center !important;
+  }
+  .st_xs_text_center {
+    text-align: center !important;
+  }
+  .st_xs_border_right_0 {
+    border-right: none;
+  }
+  
+}
+
+/****** ---------------------------------- 
+  Base Media css start here
+---------------------------------- ******/
+.imagecontainer {
+
+  width: 100%;
+
+  > div {
+    position: unset !important;
+  }
+  @media (max-width: 1000px) {
+    .image {
+      object-fit: contain !important;
+  
+    }
+  }
+  
+}
+
+.imageflex {
+
+  width: 6%;
+  @media (max-width: 1000px) {
+    width: 14%;
+  }
+  
+}
+.imageflexCarrer {
+
+  width: 20%;
+  @media (max-width: 1000px) {
+    width: 22%;
+  }
+  
+}
+.imageLogo {
+  width: 20%;
+  @include for-xl-desktop-up {
+    width: 20%;
+  }
+  @include for-xxl-desktop-up {
+  width: 17%;
+  }
+  @media (max-width: 1000px) {
+    width: 22%;
+  }
+}
+  
+
+
+.iconevents {
+  width : 30% !important;
+  .image {
+    width: 30% !important;
+
+  }
+  @media (max-width: 1000px) {
+    .image {
+      width: 30% !important;
+    }
+    width : 15% !important;
+  }
+  
+}
+
+.plantguideicon {
+  width : 10%;
+}
+
+.widthfull{
+  width:100%;
+}
+.widthonethird
+{
+  width:30%;
+}
+.widthquater
+{
+  width:20%;
+}
+.widthtwo
+{
+  width:2vh;
+}
+.widthfour
+{
+  width:4vh;
+}
+.widthsixty{
+  width:60%;
+}
+
+.tooltip {
+	position: absolute;
+	color: #fff;
+	padding: 10px;
+	background: rgba(0,0,0,0.8);
+	transform: translate3d(-50%, -50%, 0);
+	border-radius: 5px;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+
+
